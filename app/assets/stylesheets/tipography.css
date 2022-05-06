@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap%27');
+
+:root {
+    --font-general: 'Roboto', sans-serif;
+}
+
+.xl {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: var(--font-general);
+}
+
+.l {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: var(--font-general);
+
+}
+
+.r a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--font-general);
+  text-decoration: none;
+}
+
+.s {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: var(--font-general);
+
+}
+
+.xs {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: var(--font-general);
+
+}
+
+.xl-bold {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: var(--font-general);
+
+}
+
+.l-bold {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: var(--font-general);
+}
+
+.r-bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--font-general);
+}
+
+.s-bold {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: var(--font-general);
+}
+
+.xs-bold {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: var(--font-general);
+}
