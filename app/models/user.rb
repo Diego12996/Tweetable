@@ -4,7 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable
 
+  validates :username, presence: true, uniqueness: true
+  validates :name, presence: true
+
   has_one_attached :avatar
+  has_many :tweets, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def self.from_omniauth(auth_hash)
     where(provider: auth_hash.provider, uid: auth_hash.uid).first_or_create do |user|
