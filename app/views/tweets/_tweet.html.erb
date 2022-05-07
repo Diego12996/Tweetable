@@ -1,17 +1,32 @@
 <div id="<%= dom_id tweet %>">
+  <div>
+    <% if tweet.user.avatar.attached? %>
+      <%= image_tag(tweet.user.avatar) %>
+    <% else %>
+      <%= image_tag("default_logo.png") %>
+    <% end %>
+  </div>
+
+  <p>
+    <%= tweet.user.name %>
+  </p>
+  <p>
+    @<%= tweet.user.username %>
+  </p>
+   <p>
+    <%= time_ago_in_words(tweet.user.created_at) %>
+  </p>
+  
+
   <p>
     <strong>Body:</strong>
     <%= tweet.body %>
   </p>
 
   <p>
-    <strong>Comments count:</strong>
     <%= tweet.comments_count %>
   </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= tweet.user_id %>
-  </p>
+
 
 </div>
