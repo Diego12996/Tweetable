@@ -25,13 +25,9 @@ class CommentsController < ApplicationController
     @comment.tweet_id = Tweet.find_by(id: params[:tweet_id]).id
 
     if @comment.save
-      redirect_to @comment, notice: "Comment was successfully created."
-      redirect_back_or_to tweets_path
-
+      redirect_back_or_to tweets_path, notice: "Comment was successfully created."
     else
-      render :new, status: :unprocessable_entity
-      redirect_back_or_to tweets_path
-
+      redirect_back_or_to tweets_path, status: :unprocessable_entity
     end
   end
 
