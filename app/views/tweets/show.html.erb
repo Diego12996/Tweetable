@@ -2,3 +2,9 @@
 
 <%= render @tweet %>
 
+<%= render "comments/form", comment: @comment %>}
+
+<% @comment.sort.reverse.each do |comment| %>
+  <p><%= comment.body %></p>
+<% end %>
+
