@@ -40,13 +40,17 @@ class TweetsController < ApplicationController
   # DELETE /tweets/1
   def destroy
     @tweet.destroy
-    redirect_to tweets_url, notice: "Tweet was successfully destroyed."
+    redirect_to root_path, notice: "Tweet was successfully destroyed."
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
-      @tweet = Tweet.find(params[:id])
+      if Tweet.find_by(id: params[:id])
+        @tweet = Tweet.find(params[:id])
+      else
+        redirect_to root_path
+      end
     end
 
     # Only allow a list of trusted parameters through.

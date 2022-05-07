@@ -27,14 +27,6 @@
      <%= tweet.comments_count %>
   </div>
 
-  <% if current_user && tweet.user_id == @current_user.id %>
-    <%= link_to edit_tweet_path(tweet) do %>
-      <%= image_tag("edit_tweet.png") %>
-    <% end %>
-    <%= link_to tweet_path(tweet), data: { turbo_method: :delete } do %>
-      <%= image_tag("delete_tweet.png") %>
-    <% end %>
-  <% end %>
   <% if current_user && tweet.user_id == current_user.id %>
     <%= link_to edit_tweet_path(tweet) do %>
       <%= image_tag("edit_tweet.png") %>
@@ -43,7 +35,4 @@
       <%= image_tag("delete_tweet.png") %>
     <% end %>
   <% end %>
-  
-
-
 </div>

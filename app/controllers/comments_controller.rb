@@ -26,11 +26,11 @@ class CommentsController < ApplicationController
 
     if @comment.save
       redirect_to @comment, notice: "Comment was successfully created."
-      redirect_back_or_to tweets_path,
+      redirect_back_or_to tweets_path
 
     else
       render :new, status: :unprocessable_entity
-      redirect_back_or_to tweets_path,
+      redirect_back_or_to tweets_path
 
     end
   end
