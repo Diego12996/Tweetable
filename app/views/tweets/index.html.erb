@@ -8,6 +8,8 @@
 
 <div id="tweets">
   <% @tweets.sort.reverse.each do |tweet| %>
-    <%= render tweet %>
+    <%= link_to tweet do %>
+      <%= render tweet %>
+    <% end %>
   <% end %>
 </div>
